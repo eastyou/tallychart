@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tallychart"
+version = "0.1.0"
+description = "计数符号与统计图：把课堂数据变成计数符号、频数表与读图练习"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "eastyou" }]
+keywords = ["education", "statistics", "tally", "python", "teaching"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.scripts]
+tallychart = "tallychart.cli:main"
+
+[tool.setuptools]
+packages = ["tallychart"]

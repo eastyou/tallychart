@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>统计图练习：最喜欢的水果</title>
+<style>
+  @page { size: A4; margin: 14mm; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 16px;
+    background: #eef1f5;
+    color: #1f2933;
+    font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  .sheet {
+    width: 210mm;
+    min-height: 297mm;
+    margin: 0 auto;
+    padding: 16mm 18mm;
+    background: #ffffff;
+    box-shadow: 0 6px 24px rgba(31, 41, 51, 0.12);
+  }
+  h1 { font-size: 22px; margin: 0 0 4px; text-align: center; }
+  .meta { margin: 0 0 18px; color: #616e7c; text-align: center; }
+  h2 { font-size: 16px; margin: 22px 0 8px; padding-left: 8px; border-left: 4px solid #4e79a7; }
+  table { width: 100%; border-collapse: collapse; }
+  th, td { border: 1px solid #cbd2d9; padding: 6px 8px; text-align: left; }
+  th { background: #f0f4f8; font-weight: 600; }
+  .tally { font-family: "Menlo", "Consolas", monospace; letter-spacing: 2px; word-break: break-all; }
+  .chart { margin: 8px 0 0; text-align: center; }
+  .chart svg { max-width: 100%; height: auto; }
+  ol { padding-left: 22px; }
+  ol li { margin-bottom: 10px; }
+  .q { margin: 0; }
+  .blank { margin: 2px 0 0; color: #9aa5b1; }
+  .answer { margin: 2px 0 0; color: #1f6f43; font-weight: 600; }
+  .hint { margin: 0; color: #616e7c; font-size: 12px; }
+  .total { margin-top: 8px; text-align: right; color: #33404f; }
+  footer { margin-top: 26px; padding-top: 10px; border-top: 1px dashed #cbd2d9; color: #9aa5b1; font-size: 12px; text-align: center; }
+  @media print {
+    body { background: #ffffff; padding: 0; }
+    .sheet { box-shadow: none; margin: 0; width: auto; min-height: 0; padding: 0; }
+  }
+</style>
+</head>
+<body>
+<main class="sheet">
+  <h1>统计图练习：最喜欢的水果</h1>
+  <p class="meta">姓名：__________　班级：__________　日期：__________</p>
+
+  <section>
+    <h2>一、计数符号</h2>
+    <table>
+      <thead><tr><th>类别</th><th>计数符号</th><th>频数</th></tr></thead>
+      <tbody>
+<tr><td>苹果</td><td class="tally">||||/||||</td><td>9</td></tr>
+<tr><td>香蕉</td><td class="tally">||||/||</td><td>7</td></tr>
+<tr><td>橘子</td><td class="tally">||||/||</td><td>7</td></tr>
+<tr><td>葡萄</td><td class="tally">||||</td><td>4</td></tr>
+<tr><td>西瓜</td><td class="tally">|||</td><td>3</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>二、频数表</h2>
+    <table>
+      <thead><tr><th>类别</th><th>频数</th><th>占比</th></tr></thead>
+      <tbody>
+<tr><td>苹果</td><td>9</td><td>30.0%</td></tr>
+<tr><td>香蕉</td><td>7</td><td>23.3%</td></tr>
+<tr><td>橘子</td><td>7</td><td>23.3%</td></tr>
+<tr><td>葡萄</td><td>4</td><td>13.3%</td></tr>
+<tr><td>西瓜</td><td>3</td><td>10.0%</td></tr>
+      </tbody>
+    </table>
+    <p class="total">合计：30 个</p>
+  </section>
+
+  <section>
+    <h2>三、柱状图</h2>
+    <div class="chart">
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="300" viewBox="0 0 640 300" role="img" aria-label="类别频数柱状图">
+<rect x="0" y="0" width="640" height="300" fill="#ffffff"/>
+<text x="64" y="24" font-size="14" fill="#33404f" font-weight="600">频数</text>
+<line x1="64" y1="224.0" x2="608" y2="224.0" stroke="#e3e8ef" stroke-width="1"/>
+<text x="54" y="228.0" font-size="12" fill="#5b6573" text-anchor="end">0</text>
+<line x1="64" y1="188.0" x2="608" y2="188.0" stroke="#e3e8ef" stroke-width="1"/>
+<text x="54" y="192.0" font-size="12" fill="#5b6573" text-anchor="end">2</text>
+<line x1="64" y1="152.0" x2="608" y2="152.0" stroke="#e3e8ef" stroke-width="1"/>
+<text x="54" y="156.0" font-size="12" fill="#5b6573" text-anchor="end">4</text>
+<line x1="64" y1="116.0" x2="608" y2="116.0" stroke="#e3e8ef" stroke-width="1"/>
+<text x="54" y="120.0" font-size="12" fill="#5b6573" text-anchor="end">6</text>
+<line x1="64" y1="80.0" x2="608" y2="80.0" stroke="#e3e8ef" stroke-width="1"/>
+<text x="54" y="84.0" font-size="12" fill="#5b6573" text-anchor="end">8</text>
+<line x1="64" y1="44.0" x2="608" y2="44.0" stroke="#e3e8ef" stroke-width="1"/>
+<text x="54" y="48.0" font-size="12" fill="#5b6573" text-anchor="end">10</text>
+<line x1="64" y1="44" x2="64" y2="224" stroke="#33404f" stroke-width="2"/>
+<line x1="64" y1="224" x2="608" y2="224" stroke="#33404f" stroke-width="2"/>
+<rect x="86.8" y="62.0" width="63.1" height="162.0" rx="4" fill="#4e79a7"/>
+<text x="118.4" y="54.0" font-size="12" fill="#33404f" text-anchor="middle">9</text>
+<text x="118.4" y="248" font-size="12" fill="#33404f" text-anchor="middle">苹果</text>
+<rect x="195.6" y="98.0" width="63.1" height="126.0" rx="4" fill="#f28e2b"/>
+<text x="227.2" y="90.0" font-size="12" fill="#33404f" text-anchor="middle">7</text>
+<text x="227.2" y="248" font-size="12" fill="#33404f" text-anchor="middle">香蕉</text>
+<rect x="304.4" y="98.0" width="63.1" height="126.0" rx="4" fill="#59a14f"/>
+<text x="336.0" y="90.0" font-size="12" fill="#33404f" text-anchor="middle">7</text>
+<text x="336.0" y="248" font-size="12" fill="#33404f" text-anchor="middle">橘子</text>
+<rect x="413.2" y="152.0" width="63.1" height="72.0" rx="4" fill="#e15759"/>
+<text x="444.8" y="144.0" font-size="12" fill="#33404f" text-anchor="middle">4</text>
+<text x="444.8" y="248" font-size="12" fill="#33404f" text-anchor="middle">葡萄</text>
+<rect x="522.0" y="170.0" width="63.1" height="54.0" rx="4" fill="#76b7b2"/>
+<text x="553.6" y="162.0" font-size="12" fill="#33404f" text-anchor="middle">3</text>
+<text x="553.6" y="248" font-size="12" fill="#33404f" text-anchor="middle">西瓜</text>
+</svg>
+    </div>
+  </section>
+
+  <section>
+    <h2>四、读图练习</h2>
+    <ol>
+<li><p class="q">这份统计表一共有多少个数据？</p><p class="blank">答：____________________</p></li>
+<li><p class="q">「葡萄」的频数是多少？</p><p class="blank">答：____________________</p></li>
+<li><p class="q">「苹果」占全部数据的百分比是多少？（保留一位小数）</p><p class="blank">答：____________________</p></li>
+<li><p class="q">统计表中，哪个类别的频数最多？</p><p class="blank">答：____________________</p></li>
+<li><p class="q">「香蕉」的频数是多少？</p><p class="blank">答：____________________</p></li>
+    </ol>
+  </section>
+
+  <footer>tallychart · eastyou · 计数符号与统计图</footer>
+</main>
+</body>
+</html>
